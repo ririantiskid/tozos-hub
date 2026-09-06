@@ -101,7 +101,7 @@ local Window = WindUI:CreateWindow({
 		ButtonsType = "Mac", -- Default or Mac
 	},
 })
-
+Window:SetToggleKey(Enum.KeyCode.LeftControl)
 --createPopup()
 
 --Window:SetUIScale(.8)
@@ -897,7 +897,7 @@ if not RunService:IsStudio() and writefile and printidentity() then
 			Flag = "KeybindTest",
 			Title = "Keybind",
 			Desc = "Keybind to open ui",
-			Value = "G",
+			Value = "LeftControl",
 			Callback = function(v)
 				Window:SetToggleKey(Enum.KeyCode[v])
 			end,
@@ -1157,5 +1157,57 @@ ScriptsTab:Button({
     Justify = "Center",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ririantiskid/anim/refs/heads/main/anim"))()
+    end,
+})
+
+local ScriptsTab2 = ScriptsSection:Tab({
+    Title = "Dark dex",
+    Icon = "bird",
+})
+
+ScriptsTab2:Button({
+    Title = "Execute",
+    Justify = "Center",
+    Callback = function()
+    loadstring(game:HttpGet('https://rawscripts.net/raw/Universal-Script-SECURE-DEX-AND-REMOTE-SPY-205256'))()
+    end,
+})
+
+local ScriptsTab3 = ScriptsSection:Tab({
+    Title = "inf yield",
+    Icon = "bird",
+})
+
+ScriptsTab3:Button({
+    Title = "Execute",
+    Justify = "Center",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+    end,
+})
+
+local ScriptsTab4 = ScriptsSection:Tab({
+    Title = "zoung",
+    Icon = "bird",
+})
+
+ScriptsTab4:Button({
+    Title = "Execute",
+    Justify = "Center",
+    Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ririantiskid/zoung/refs/heads/main/zoung"))()
+    end,
+})
+
+local ScriptsTab5 = ScriptsSection:Tab({
+    Title = "cobalt",
+    Icon = "bird",
+})
+
+ScriptsTab5:Button({
+    Title = "Execute",
+    Justify = "Center",
+    Callback = function()
+    loadstring(game:HttpGet("https://gitlab.com/upio/cobalt/-/releases/permalink/latest/downloads/Cobalt.luau"))()
     end,
 })
