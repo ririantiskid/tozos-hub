@@ -1211,3 +1211,16 @@ ScriptsTab5:Button({
     loadstring(game:HttpGet("https://gitlab.com/upio/cobalt/-/releases/permalink/latest/downloads/Cobalt.luau"))()
     end,
 })
+
+local ScriptsTab6 = ScriptsSection:Tab({
+    Title = "songs",
+    Icon = "bird",
+})
+
+ScriptsTab6:Button({
+    Title = "Execute",
+    Justify = "Center",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ririantiskid/songs/refs/heads/main/songs"))()
+    end,
+})
